@@ -1,4 +1,3 @@
-import { sendLog, initApp } from './emailUtils';
+import { sendLog, fakeInit, initApp } from './emailUtils';
 
-initApp(15000, sendLog);
-// initApp(15000, console.log);
+initApp(15000, 10000000, sendLog, fakeInit);
