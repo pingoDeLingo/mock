@@ -16,7 +16,11 @@ class InchesToCm implements CalculatingFunction {
 }
 
 class CustomMultiplier implements CalculatingFunction {
-    constructor(private multiplier: number, private inputUnitName: string, private outputUnitName: string) {}
+    constructor(
+        private multiplier: number,
+        private inputUnitName: string,
+        private outputUnitName: string
+    ) {}
 
     calculate(x: number): number {
         return x * this.multiplier;
@@ -32,7 +36,11 @@ class CustomMultiplier implements CalculatingFunction {
 }
 
 class CustomFunction implements CalculatingFunction {
-    constructor(private equation: string, private inputUnitName: string, private outputUnitName: string) {}
+    constructor(
+        private equation: string,
+        private inputUnitName: string,
+        private outputUnitName: string
+    ) {}
 
     calculate(x: number): number {
         const equationWithX = this.equation.replace("x", x.toString());
